@@ -27,6 +27,13 @@ export class LoginPage {
     this.navCtrl.push(SignupPage);
   }
 
+  login() {
+    if (this.user.email == "eharmon@email.sc.edu" && this.user.password == "1234") {
+      this.navCtrl.setRoot(HomePage);
+      // this.navCtrl.push(HomePage);
+    }
+  }
+
   // login() {
   //   this.firebase.auth.signInWithEmailAndPassword(this.email, this.password).then(function() {
   //     this.navCtrl.push(HomePage);
