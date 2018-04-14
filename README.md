@@ -1,13 +1,13 @@
-# Party Fowl
+t# Party Fowl
 
-An app to locate parties
+An app to locate events
 
 ## Features
 
 1. Name of party
 2. Address
 3. Time and Date
-4. Pictures
+4. Picture
 5. Tags
 6. Notifications
 7. Public or Private

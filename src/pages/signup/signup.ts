@@ -21,7 +21,11 @@ export class SignupPage {
   password: string;
   dob;
 
+<<<<<<< HEAD
   constructor(public navCtrl: NavController, public af: AngularFireAuth, public fs: AngularFirestore) {
+=======
+  constructor(public navCtrl: NavController) {
+>>>>>>> master
   }
 
   signup() {

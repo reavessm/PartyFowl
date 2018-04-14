@@ -1,3 +1,14 @@
 page-my-events {
-
+	.list .ion-avatar img	 {
+	width:200% !important;
+	height : 200% !important;  
+	max-width: 100px !important;  //any size
+	max-height: 1000px !important; //any size 
+	}
 }
+
+p {
+    word-break: break-all;
+    white-space: normal;
+}
+
