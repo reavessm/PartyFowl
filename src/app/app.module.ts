@@ -14,9 +14,22 @@ import { SettingsPage } from '../pages/settings/settings';
 import { ProfilePage } from '../pages/profile/profile';
 import { EditProfilePage } from '../pages/edit-profile/edit-profile';
 
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { HttpModule } from '@angular/http';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+import { FirebaseProvider } from './../providers/firebase/firebase';
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCx_bj_D_z-uFoWo8snt1QtuuInrewTKWI",
+    authDomain: "partyfowl-d4c42.firebaseapp.com",
+    databaseURL: "https://partyfowl-d4c42.firebaseio.com",
+    projectId: "partyfowl-d4c42",
+    storageBucket: "partyfowl-d4c42.appspot.com",
+    messagingSenderId: "688549902575"
+  };
 
 @NgModule({
   declarations: [
@@ -34,7 +47,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(firebaseConfig),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -53,8 +69,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    Firebase,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    FirebaseProvider
   ]
 })
 export class AppModule {}
