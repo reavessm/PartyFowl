@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Create Event
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page2">
+  <ion-card id="createEvent-card23">
+    <ion-list>
+      <div style="width:100%;height:220px;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">
+        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
+      </div>
+      <form id="createEvent-form5">
+        <ion-item id="createEvent-input9">
+          <ion-label stacked>
+            Name
+          </ion-label>
+          <ion-input type="text" placeholder="" name="name"></ion-input>
+        </ion-item>
+        <ion-item id="createEvent-input14">
+          <ion-label stacked>
+            Location
+          </ion-label>
+          <ion-input type="text" placeholder="" name="location"></ion-input>
+        </ion-item>
+        <ion-item id="createEvent-textarea2">
+          <ion-label>
+            Description
+          </ion-label>
+          <ion-textarea placeholder=""></ion-textarea>
+        </ion-item>
+        <ion-item-divider color="light" id="createEvent-list-item-divider2">
+          Max Capacity
+        </ion-item-divider>
+        <ion-item id="createEvent-range1">
+          <ion-range min="0" max="100" step="1" color="positive" value="50" name="capacity"></ion-range>
+        </ion-item>
+        <ion-item id="createEvent-textarea3">
+          <ion-label>
+            Interests
+          </ion-label>
+          <ion-textarea placeholder="Add Interests seperated by commas"></ion-textarea>
+        </ion-item>
+        <ion-item id="createEvent-list-item-container6">
+          <div id="createEvent-markdown10" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;">
+              // Figure out how to do list thing
+            </p>
+          </div>
+        </ion-item>
+      </form>
+    </ion-list>
+  </ion-card>
+  <button id="createEvent-button4" ion-button color="positive" block style="border-radius:10px 10px 10px 10px;" on-click="goToEventDetails()">
+    Create
+  </button>
+</ion-content>
