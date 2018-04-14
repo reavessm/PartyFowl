@@ -21860,3 +21860,15 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-bottom));
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
+
+page-my-events .list .ion-avatar img {
+  width: 200% !important;
+  height: 200% !important;
+  max-width: 100px !important;
+  max-height: 1000px !important;
+}
+
+p {
+  word-break: break-all;
+  white-space: normal;
+}
