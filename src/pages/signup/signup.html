@@ -15,31 +15,31 @@
         <ion-label>
           Full Name
         </ion-label>
-        <ion-input type="text" placeholder="" [(ngModel)]="fullName"></ion-input>
+        <ion-input type="text" placeholder="" [(ngModel)]="user.fullName" name="fullName"></ion-input>
       </ion-item>
       <ion-item id="signup-input6">
         <ion-label>
           Username
         </ion-label>
-        <ion-input type="text" placeholder="" [(ngModel)]="username"></ion-input>
+        <ion-input type="text" placeholder="" [(ngModel)]="user.username" name="username"></ion-input>
       </ion-item>
       <ion-item id="signup-input4">
         <ion-label>
           Email
         </ion-label>
-        <ion-input type="email" placeholder="" [(ngModel)]="email"></ion-input>
+        <ion-input type="email" placeholder="" [(ngModel)]="user.email" name="email"></ion-input>
       </ion-item>
       <ion-item id="signup-input5">
         <ion-label>
           Password
         </ion-label>
-        <ion-input type="password" placeholder="" [(ngModel)]="password"></ion-input>
+        <ion-input type="password" placeholder="" [(ngModel)]="user.password" name="password"></ion-input>
       </ion-item>
       <ion-item id="signup-input7">
         <ion-label>
           Date of Birth
         </ion-label>
-        <ion-input type="date" placeholder="" [(ngModel)]="dob"></ion-input>
+        <ion-input type="date" placeholder="" [(ngModel)]="user.dob" name="dob"></ion-input>
       </ion-item>
     </ion-list>
     <button id="signup-button3" ion-button color="balanced" on-click="signup()" block>

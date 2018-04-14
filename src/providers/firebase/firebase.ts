@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 /*
   Generated class for the FirebaseProvider provider.
@@ -16,15 +16,15 @@ export class FirebaseProvider {
   }
 
   getShoppingItems() {
-    return this.afd.list('/shoppingItems/');
+    // return this.afd.list('/shoppingItems/');
   }
 
   addItem(name) {
-    this.afd.list('/shoppingItems/').push(name);
+    // this.afd.list('/shoppingItems/').push(name);
   }
 
   removeItem(id) {
-    this.afd.list('/shoppingItems/').remove(id);
+    // this.afd.list('/shoppingItems/').remove(id);
   }
 
 }
