@@ -10,7 +10,8 @@ import { HomePage } from '../home/home';
 
 @Component({
   selector: 'page-login',
-  templateUrl: 'login.html'
+  templateUrl: 'login.html',
+  providers: [AngularFireAuth]
 })
 export class LoginPage {
 
@@ -19,7 +20,7 @@ export class LoginPage {
   email;
   password;
 
-  constructor(public navCtrl: NavController/*, private firebase: AngularFireAuth*/) {
+  constructor(public navCtrl: NavController, public firebase: AngularFireAuth) {
   }
 
   goToSignup(params) {
@@ -27,22 +28,31 @@ export class LoginPage {
     this.navCtrl.push(SignupPage);
   }
 
+  // login() {
+  //   if (this.user.email == "eharmon@email.sc.edu" && this.user.password == "1234") {
+  //     this.navCtrl.setRoot(HomePage);
+  //     // this.navCtrl.push(HomePage);
+  //   }
+  // }
+
   login() {
-    if (this.user.email == "eharmon@email.sc.edu" && this.user.password == "1234") {
-      this.navCtrl.setRoot(HomePage);
-      // this.navCtrl.push(HomePage);
-    }
+    var that = this;
+    this.firebase.auth.signInWithEmailAndPassword(this.user.email, this.user.password).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ...
+    }).then(function() {
+      that.changeRootPage();
+    });
   }
 
-  // login() {
-  //   this.firebase.auth.signInWithEmailAndPassword(this.email, this.password).then(function() {
-  //     this.navCtrl.push(HomePage);
-  //   }).catch(function(error) {
-  //     // Handle Errors here.
-  //     var errorCode = error.code;
-  //     var errorMessage = error.message;
-  //     // ...
-  //   });
-  // }
+  changeRootPage() {
+    this.firebase.auth.onAuthStateChanged(function(user) {
+      if (user) {
+        this.setRoot.navCtrl(HomePage);
+      }
+    });
+  }
 
 }

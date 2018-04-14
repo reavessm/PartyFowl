@@ -19,31 +19,58 @@
           <ion-label stacked>
             Name
           </ion-label>
-          <ion-input type="text" placeholder="" name="name"></ion-input>
+          <ion-input type="text" placeholder="" name="name" [(ngModel)]="event.name"></ion-input>
         </ion-item>
         <ion-item id="createEvent-input14">
           <ion-label stacked>
             Location
           </ion-label>
-          <ion-input type="text" placeholder="" name="location"></ion-input>
+          <ion-input type="text" placeholder="" name="location" [(ngModel)]="event.location"></ion-input>
         </ion-item>
         <ion-item id="createEvent-textarea2">
           <ion-label>
             Description
           </ion-label>
-          <ion-textarea placeholder=""></ion-textarea>
+          <ion-textarea placeholder="" [(ngModel)]="event.description"></ion-textarea>
+        </ion-item>
+        <ion-item id="createEvent-starttime">
+          <ion-label stacked>
+            Start Time
+          </ion-label>
+          <ion-input type="text" placeholder="" name="startTime" [(ngModel)]="event.startTime"></ion-input>
         </ion-item>
         <ion-item-divider color="light" id="createEvent-list-item-divider2">
           Max Capacity
         </ion-item-divider>
         <ion-item id="createEvent-range1">
-          <ion-range min="0" max="100" step="1" color="positive" value="50" name="capacity"></ion-range>
+          <ion-range min="0" max="100" step="1" color="positive" value="50" name="capacity" [(ngModel)]="event.capacity">
+            <ion-label range-left>0</ion-label>
+            <ion-label range-right>100</ion-label>
+          </ion-range>
         </ion-item>
         <ion-item id="createEvent-textarea3">
           <ion-label>
             Interests
           </ion-label>
           <ion-textarea placeholder="Add Interests seperated by commas"></ion-textarea>
+        </ion-item>
+        <ion-item id="createEvent-need1">
+          <ion-label stacked>
+            Need 1
+          </ion-label>
+          <ion-input type="text" placeholder="" name="need1" [(ngModel)]="event.needone"></ion-input>
+        </ion-item>
+        <ion-item id="createEvent-need2">
+          <ion-label stacked>
+            Need 2
+          </ion-label>
+          <ion-input type="text" placeholder="" name="need2" [(ngModel)]="event.needtwo"></ion-input>
+        </ion-item>
+        <ion-item id="createEvent-need3">
+          <ion-label stacked>
+            Need 3
+          </ion-label>
+          <ion-input type="text" placeholder="" name="need3" [(ngModel)]="event.needthree"></ion-input>
         </ion-item>
         <ion-item id="createEvent-list-item-container6">
           <div id="createEvent-markdown10" class="show-list-numbers-and-dots">
@@ -55,7 +82,7 @@
       </form>
     </ion-list>
   </ion-card>
-  <button id="createEvent-button4" ion-button color="positive" block style="border-radius:10px 10px 10px 10px;" on-click="goToEventDetails()">
+  <button id="createEvent-button4" ion-button color="positive" block style="border-radius:10px 10px 10px 10px;" on-click="createEvent()">
     Create
   </button>
 </ion-content>

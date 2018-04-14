@@ -11,12 +11,12 @@ import { AngularFireDatabase } from 'angularfire2/database';
 @Injectable()
 export class FirebaseProvider {
 
-  constructor(public http: HttpClient) {
+  constructor(public http: HttpClient, public afd: AngularFireDatabase) {
     console.log('Hello FirebaseProvider Provider');
   }
 
-  getShoppingItems() {
-    // return this.afd.list('/shoppingItems/');
+  getEvents() {
+    return this.afd.list('/Events/');
   }
 
   addItem(name) {

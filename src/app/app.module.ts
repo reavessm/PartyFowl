@@ -20,6 +20,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { FirebaseProvider } from './../providers/firebase/firebase';
 
 const firebaseConfig = {
@@ -50,6 +51,7 @@ const firebaseConfig = {
     IonicModule.forRoot(MyApp),
     HttpModule,
     AngularFireDatabaseModule,
+    AngularFirestoreModule,
     AngularFireModule.initializeApp(firebaseConfig),
   ],
   bootstrap: [IonicApp],
