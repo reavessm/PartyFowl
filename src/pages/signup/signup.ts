@@ -19,7 +19,7 @@ export class SignupPage {
   password;
   dob;
 
-  constructor(public navCtrl: NavController, public firebase: AngularFireAuth) {
+  constructor(public navCtrl: NavController) {
   }
 
   // signup() {
